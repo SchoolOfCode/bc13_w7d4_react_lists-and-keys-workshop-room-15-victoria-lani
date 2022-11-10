@@ -8,10 +8,25 @@ import Post from '../Post';
 
 function Main() {
   const [posts, setPosts] = useState(samplePosts);
-  //not sure if this is right?!
+
+  return(
   <main id="main">
-  {posts.map(()=> {return <Post key={posts.postId} title={posts.title} date={posts.date} author={posts.author} text={posts.text} highlights={posts.highlights} image={posts.image} />})}
-  </main>;
+  
+  {posts.map((post)=>{
+    return  <Post key={posts.postId} title={posts.title}/>
+
+  }
+  )
+}
+ </main>
+  )
 }
 
+
+{/* // destructure later!!
+  {posts.map(()=> {return <Post key={posts.postId} title={posts.title} date={posts.date} author={posts.author} text={posts.text} highlights={posts.highlights} image={posts.image} />})}
+*/}
+ 
+
 export default Main;
+
