@@ -6,18 +6,22 @@ import samplePosts from '../../libs/data';
 
 import Post from '../Post';
 
+// function extractArray(post){
+//   return  <Post key={post.postId} title={post.title}/> 
+// }
+
 function Main() {
   const [posts, setPosts] = useState(samplePosts);
 
   return(
   <main id="main">
-  
-  {posts.map((post)=>{
-    return  <Post key={posts.postId} title={posts.title}/>
+{/*   
+    {posts.map(extractArray)} */}
 
-  }
-  )
-}
+    {posts.map((post)=>{
+    return  <Post key={post.postId} title={post.title}/> 
+    })}
+
  </main>
   )
 }
